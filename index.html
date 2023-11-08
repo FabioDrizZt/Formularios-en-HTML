@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./js/script.js"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Modifica el titulo del documento -->
+    <title>Registro de usuario</title>
+  </head>
+  <body>
+    <form action="resultado.html" method="post">
+      <h1>Registro de Usuario</h1>
+      <label for="nombre">Nombre:</label>
+      <input
+        type="text"
+        id="nombre"
+        name="nombre"
+        required
+        pattern="[a-zA-Z]{3,}"
+      />
+      <label for="correo">Correo:</label>
+      <input
+        type="email"
+        id="correo"
+        name="correo"
+        required
+        pattern="[a-zA-Z0-9._%+-]+@digitalmind\.com"
+      />
+      <label for="password">Contraseña:</label>
+      <input type="password" id="password" name="password" required />
+      <label for="job">Función</label>
+      <select id="job" name="job" required>
+        <option value="" disabled selected hidden>Seleccione una opcion</option>
+        <optgroup label="Web">
+          <option value="frontend">Desarrollador FrontEnd</option>
+          <option value="backend">Desarrollador BackEnd</option>
+          <option value="fullstack">Desarrollador FullStack</option>
+        </optgroup>
+        <optgroup label="Mobile">
+          <option value="Android">Desarrollador Android</option>
+          <option value="iOS">Desarrollador iOS</option>
+        </optgroup>
+      </select>
+      <button type="reset">Resetear</button>
+      <button type="submit">Enviar</button>
+    </form>
+  </body>
+</html>
